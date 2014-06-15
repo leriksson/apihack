@@ -7,10 +7,11 @@ $(function() {
 		youtubeSearch(searchTerm);
 	});
 
-	$('a.thumb').click(function() {
-		console.log('HELLO');
+	$('a.thumb').click(function(e) {
+		// e.preventDefault();
+		console.log('HELLO????');
 	});
-
+	console.log('goodbye????');
 });
 
 
@@ -34,16 +35,12 @@ function youtubeSearch(enterSearch) {
 					"data-title": element.snippet.title,
 					"data-description": element.snippet.description,
 				})
-			}));
-
+			}))
+			.click(function(e){
+				e.preventDefault();
+				console.log('HERE WE GO');
+				});
 		});
 
 	});
 }
-
-function insertVideo(){
-	$('a').click(function(){
-		console.log('HELLO');
-	});
-}
-
