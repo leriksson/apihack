@@ -30,7 +30,10 @@ function youtubeSearch(enterSearch) {
 
 		$.each(data.items, function(index, element) {
 			$('.results').append($('<img>', {
-				src: element.snippet.thumbnails.default.url
+				src: element.snippet.thumbnails.default.url,
+				data-link: element.snippet.thumbnails.default.url,
+				data-title: element.snippet.title,
+				data-about: element.snippet.thumbnails.default.url,
 			}));
 			// console.log(element.snippet.thumbnails.medium.url);
 		});
