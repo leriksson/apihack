@@ -31,14 +31,14 @@ function youtubeSearch(enterSearch) {
 		$.each(data.items, function(index, element) {
 			$('.results').append($('<img>', {
 				src: element.snippet.thumbnails.default.url,
-				data-link: element.snippet.thumbnails.default.url,
-				data-title: element.snippet.title,
-				data-about: element.snippet.thumbnails.default.url,
+				id: element.id.videoId,
+				// data-title: element.snippet.title,
+				// data-title: element.snippet.thumbnails.default.url,
 			}));
 			// console.log(element.snippet.thumbnails.medium.url);
 		});
 
-		$('#videothumb').attr('src','http://i.stack.imgur.com/nGCYr.jpg?s=128&g=1');
+		// $('#videothumb').attr('src','http://i.stack.imgur.com/nGCYr.jpg?s=128&g=1');
 		// $.each(result.items, function(i, item) {
 		// 	var video = renderThumbs(item);
 		// 	$('.results').append(video);
