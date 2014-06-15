@@ -21,7 +21,7 @@ $(function() {
 // AJAX Search to youtube with response going to results
 
 function youtubeSearch(enterSearch) {
-	var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + enterSearch + "&key=AIzaSyAXq2v7qYN9ht5Xi8D32LOqiBGpEzg_bWI';
+	var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=' + enterSearch + '&key=AIzaSyAXq2v7qYN9ht5Xi8D32LOqiBGpEzg_bWI';
 	$.getJSON(url, function(data) {
 		$('.results').html(data);
 		// $('img').attr('src', 'http://i.stack.imgur.com/nGCYr.jpg?s=128&g=1');
