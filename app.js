@@ -35,7 +35,8 @@ function youtubeSearch(enterSearch) {
 				// data-title: element.snippet.title,
 				// data-title: element.snippet.thumbnails.default.url,
 			}));
-			// console.log(element.snippet.thumbnails.medium.url);
+			
+			console.log(element.snippet.title);
 		});
 
 		// $('#videothumb').attr('src','http://i.stack.imgur.com/nGCYr.jpg?s=128&g=1');
