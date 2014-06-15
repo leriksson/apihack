@@ -37,8 +37,9 @@ function youtubeSearch(enterSearch) {
 				var vidDescrip = $(this).data('description');
 				var vidId = $(this).attr('id');
 				var playerURL = $('iframe');
+				$('iframe').nextAll().remove();
 
-				playerURL.attr('src', 'http://www.youtube.com/embed/' + vidId + '?enablejsapi=1&iv_load_policy=3&playerapiid=player_component_4&disablekb=1&wmode=transparent&controls=0&showinfo=0&modestbranding=1&rel=0&autoplay=0&loop=0');
+				playerURL.attr('src', 'http://www.youtube.com/embed/' + vidId + '?autohide=1&enablejsapi=1&origin=http://leriksson.github.io/apihack/index.html');
 				console.log(playerURL.attr('src'));
 
 				})
@@ -47,5 +48,8 @@ function youtubeSearch(enterSearch) {
 
 	});
 }
+
+// $('iframe').nextAll().remove();
+// playerURL.attr('src', 'http://www.youtube.com/embed/' + vidId + '?autohide=1&enablejsapi=1&origin=http://leriksson.github.io/apihack/index.html');
 
 
