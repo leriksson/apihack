@@ -73,7 +73,7 @@ body {
 }
 
 button {
-    width : 210px;
+    width : 209px;
     background-color: gray;
     color:;
     cursor : pointer;
@@ -89,7 +89,7 @@ button {
 
 form {
 	position: absolute;
-	bottom: 1px;
+	bottom: 0;
 }
 
 .infobox {
@@ -113,7 +113,7 @@ input {
 }
 
 input[type=text] {
-	width: 428px;
+	width: 427px;
 }
 
 input[type=submit] {
