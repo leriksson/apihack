@@ -4,13 +4,29 @@ $(function() {
 
 	$('form').submit(function() {
 		var searchTerm = $('input[name="tags"]').val();
+		$('.rainbox').hide();
 		youtubeSearch(searchTerm);
 	});
-
+	colorBox();
 	console.log('goodbye????');
 });
 
-
+// color box
+function colorBox() {
+	// var colors = ["#FFCC00","#006600","#CC0000"];
+	// var rand = Math.floor(Math.random()*colors.length);
+	// $('.rainbox').css("background-color", colors[rand]);
+	// var randomColor = Math.floor(Math.random()*16777215).toString(16);
+	var randomColor = "#" + Math.random().toString(16).slice(2, 8);
+	console.log(randomColor);
+	console.log(randomColor);
+	console.log(randomColor);
+	for (var i = 0; i < 20; i++) {
+		$('.rainbow').append($('<div>', {
+			class: 'rainbox',
+		}).css("background-color", randomColor));
+	}
+}
 
 // AJAX Search to youtube with response going to results
 
@@ -41,6 +57,7 @@ function youtubeSearch(enterSearch) {
 				$('.vjs-poster').remove();
 				$('.title').text(vidTitle);
 				$('.about').text(vidDescrip);
+
 
 				playerURL.prop('src', 'http://www.youtube.com/embed/' + vidId + '?enablejsapi=1&iv_load_policy=3&playerapiid=player_component_4&disablekb=1&wmode=transparent&controls=0&showinfo=0&modestbranding=1&rel=0&autoplay=0&loop=0');
 				console.log(playerURL.attr('src'));
