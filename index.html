@@ -11,36 +11,46 @@
 <body>
   <div class="wrapper">
     <div class="videobox">
+
       <video id="player" 
       class="video-js vjs-default-skin" 
       controls
       preload="auto" 
-      width="854"
-      height="480"
+      width="640"
+      height="360"
       poster="http://ec2-54-227-116-247.compute-1.amazonaws.com/models/site-templates/images/cover_img/ted_cover.jpg" 
       data-setup='{"techOrder":["youtube"], "src":"http://www.youtube.com/watch?v=xYemnKEKx0c"}'></video>
-    </div>
 
-    <div class="controls">
-      <button onclick="playPause()">Play/Pause</button>
-      <button onclick="playPause()">Full Screen</button>
-      <button onclick="playPause()">Subtitles</button>
-    </div>
+      <div class="controlbox">
 
-    <div class="infobox">
-      <div class="title">Video Name</div>
-      <div class="about">Information about the video.</div>
+        <div class="controls">
+          <button onclick="playPause()">Play/Pause</button>
+          <button onclick="playPause()">Full Screen</button>
+          <button onclick="playPause()">Subtitles</button>
+        </div>
+
+        <div class="infobox">
+          <div class="title">Video Name</div>
+          <div class="about">Information about the video.</div>
+        </div>
+
+        <div class="searchbox">
+          <form class="search" onsubmit="return false;">
+            <input type="text" placeholder='Whats your pleasure' name="tags" size="30" autofocus required>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+
+      </div>
+      
     </div>
     
-    <div class="searchbox">
-      <form class="search" onsubmit="return false;">
-        <input type="text" placeholder='Whats your pleasure' name="tags" size="30" autofocus required>
-        <input type="submit" value="Submit">
-      </form>
+    
+
       <div class="results">
         <img id="videothumb" src="" alt="">
-      </div>  
-    </div>
+      </div> 
+
   </div>
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>

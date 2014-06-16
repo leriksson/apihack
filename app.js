@@ -27,7 +27,7 @@ function youtubeSearch(enterSearch) {
 				"data-title": element.snippet.title,
 				"data-description": element.snippet.description,
 				html: $("<img>", {
-					src: element.snippet.thumbnails.default.url,
+					src: element.snippet.thumbnails.medium.url,
 				})
 			})
 			// click a tag changes video and title div
@@ -37,9 +37,12 @@ function youtubeSearch(enterSearch) {
 				var vidDescrip = $(this).data('description');
 				var vidId = $(this).attr('id');
 				var playerURL = $('iframe');
-				$('iframe').nextAll().remove();
+				// $('iframe').nextAll().remove();
+				$('.vjs-poster').remove();
+				$('.title').text(vidTitle);
+				$('.about').text(vidDescrip);
 
-				playerURL.attr('src', 'http://www.youtube.com/embed/' + vidId + '?autohide=1&enablejsapi=1&origin=http://leriksson.github.io/apihack/index.html');
+				playerURL.prop('src', 'http://www.youtube.com/embed/' + vidId + '?enablejsapi=1&iv_load_policy=3&playerapiid=player_component_4&disablekb=1&wmode=transparent&controls=0&showinfo=0&modestbranding=1&rel=0&autoplay=0&loop=0');
 				console.log(playerURL.attr('src'));
 
 				})

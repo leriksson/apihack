@@ -1,14 +1,43 @@
-.wrapper {
-	width: 854px;
-	margin: 50px auto;
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px black;
 }
+
+body {
+	background-color: red;
+	color: gray;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-transform: lowercase;
+	line-height: 150%;
+	border: 1px black;
+}
+
+
 
 /* video box */
 
+.videobox {
+	float: left;
+	width: 640px;
+	display: inline;
+}
 
-/* search box */
+.results {
+	float: right;
+}
+
+.title {
+	font-size: 1.3em;
+	letter-spacing: 2px;
+}
+
 
 .searchbox {
-	width: 600px;
-	margin: 100px auto;
+	display: inline;
 }
+
+
