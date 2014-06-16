@@ -16,28 +16,28 @@ body {
 	border: 1px black;
 }
 
-
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
 
 /* video box */
 
 .videobox {
 	float: left;
 	width: 640px;
-	display: inline;
 }
 
-.results {
-	float: right;
-}
 
 .title {
 	font-size: 1.3em;
 	letter-spacing: 2px;
 }
 
-
-.searchbox {
-	display: inline;
+a {
+	display: inline-block;
 }
+
+
 
 
