@@ -9,6 +9,11 @@ $(function() {
 	});
 	colorBox();
 	console.log('goodbye????');
+
+	$('#first').click(function() {
+		console.log('button');
+
+	});
 });
 
 // color box
@@ -17,16 +22,20 @@ function colorBox() {
 	// var rand = Math.floor(Math.random()*colors.length);
 	// $('.rainbox').css("background-color", colors[rand]);
 	// var randomColor = Math.floor(Math.random()*16777215).toString(16);
-	var randomColor = "#" + Math.random().toString(16).slice(2, 8);
-	console.log(randomColor);
-	console.log(randomColor);
-	console.log(randomColor);
+	// var randomColor = "#" + Math.random().toString(16).slice(2, 8);
+
 	for (var i = 0; i < 20; i++) {
+		var randomColor = "#" + Math.random().toString(16).slice(2, 8);
+
 		$('.rainbow').append($('<div>', {
 			class: 'rainbox',
 		}).css("background-color", randomColor));
 	}
 }
+
+// buttons functions
+
+function firstbutton(){}
 
 // AJAX Search to youtube with response going to results
 

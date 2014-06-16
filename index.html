@@ -18,25 +18,25 @@
       preload="auto" 
       width="640"
       height="360"
-      poster="http://ec2-54-227-116-247.compute-1.amazonaws.com/models/site-templates/images/cover_img/ted_cover.jpg" 
-      data-setup='{"techOrder":["youtube"], "src":"http://www.youtube.com/watch?v=xYemnKEKx0c"}'></video>
+      poster="http://bakchnl.com/images/640px-SMPTE_Color_Bars_16x9.svg.png" 
+      data-setup='{"techOrder":["youtube"], "src":"https://www.youtube.com/watch?v=z7bSxhFBQT0"}'></video>
 
       <div class="controlbox">
 
         <div class="controls">
-          <button onclick="playPause()">Play/Pause</button>
-          <button onclick="playPause()">Full Screen</button>
-          <button onclick="playPause()">Subtitles</button>
+          <button id:"first">Play/Pause</button>
+          <button id="second" onclick="playPause()">Full Screen</button>
+          <button id="third" onclick="myPlayer.muted()">mute</button>
         </div>
 
         <div class="infobox">
-          <div class="title">Video Name</div>
-          <div class="about">Information about the video.</div>
+          <div class="title">Video Search Tool</div>
+          <div class="about">Type the search term and then click on the thumb.</div>
         </div>
 
         <div class="searchbox">
           <form class="search" onsubmit="return false;">
-            <input type="text" placeholder='Whats your pleasure' name="tags" size="30" autofocus required>
+            <input type="text" placeholder='Enter Search Term' name="tags" size="30" autofocus required>
             <input type="submit" value="Submit">
           </form>
         </div>
