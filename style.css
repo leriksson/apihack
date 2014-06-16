@@ -89,7 +89,7 @@ button {
 
 form {
 	position: absolute;
-	bottom: 5px;
+	bottom: 1px;
 }
 
 .infobox {
@@ -113,9 +113,9 @@ input {
 }
 
 input[type=text] {
-	width: 427px;
+	width: 428px;
 }
 
 input[type=submit] {
-	width: 208px;
+	width: 207px;
 }
